@@ -9,7 +9,9 @@ var startQuoteFilm = ["J'étais prêt à tourner la page", "Je n'aime pas faire 
 var middleQuoteFilm = ["mais c'est la page", "mais je vais te donner un conseil", "est quelqu'un", " si on la rencontre", "pour les gens", "on se condamne", "ou tu caches un lapin"];
 var endQuoteFilm = ["qui ne veut pas se tourner !!!", "qui te servira à jamais !!!", "qu'on prend le risque de perdre !!!", "trop tôt ou trop tard!!!", "qui t'aiment!!!", "à ne pas avoir d'avenir !!!","dans ton pantalon"];
 
-
+var boutonElt = document.getElementById("bouton");
+// Ajout d'un gestionnaire pour l'événement click
+boutonElt.addEventListener("click", function () {
 // Génération aléatoire d'un nombre compris entre 0 et taille d'un tableau -1
 function aleatoire(morceauCitation){
 	return Math.floor(Math.random() * morceauCitation.length);
@@ -88,7 +90,7 @@ while ((choice !==0) && (type !==0)) {
 	}
 }
 
-
+});
 
 
 
