@@ -51,21 +51,24 @@ boutonElt.addEventListener("click", function () {
 			}
 		};
 	};
-
+    // Affichage dans la console des differentes options
 	console.log(" 1 : Générer 1 citations \n 2 : Générer 2 citations \n 3 : Générer 3 citations \n 4 : Générer 4 citations \n 5 : Générer 5 citations \n 0 : Quitter \n");
 
 
 	while ((choice !==0) && (type !==0)) {
-
+        // Choix du nombre de citation par l'utilisateur
 		var choice = Number(prompt("Combien voulez-vous de citation ? "));
 		
 		if ((choice >= 0) && (choice <= 5)){
 			if (choice !==0 ) {
+				//choix du type de citation
 				console.log(" 1 : Citation de foot \n 2 : Citation de film \n 0 : Quitter");
 				var type = Number(prompt("Quel type de citation voulez vous? "));
+				// Gestion des erreurs de saisi du type de citation.
 				while ((type !== 1) && (type !== 2) && (type !== 0)) {
 					type = Number(prompt("Je ne connait pas ce type ;-), veuillez entrer un type correct : "));
 				}
+				// Affichage des citations suivant la demande de l'utilisateur.
 				switch (choice) {
 					case 1 :
 						quote(choice);
